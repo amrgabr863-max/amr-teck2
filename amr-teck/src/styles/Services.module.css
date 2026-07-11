@@ -1,0 +1,140 @@
+/* ═══════════════════════════════════════════
+   Services Section Styles - تنسيقات قسم الخدمات
+   ═══════════════════════════════════════════ */
+
+.services {
+  padding: 6rem 0;
+  background: var(--blue-dark);
+  position: relative;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* شبكة الخدمات */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+/* بطاقة الخدمة */
+.card {
+  background: var(--blue);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* الأيقونة */
+.iconWrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  transition: var(--transition);
+}
+
+.card:hover .iconWrapper {
+  background: var(--gold);
+  color: var(--blue-dark);
+  transform: rotate(-5deg) scale(1.1);
+}
+
+/* عنوان البطاقة */
+.cardTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+/* وصف البطاقة */
+.cardDesc {
+  font-size: 0.9rem;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+/* المميزات */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.featureTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+/* التأثير الزخرفي */
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+  opacity: 0;
+  transition: var(--transition);
+  pointer-events: none;
+}
+
+.card:hover .cardGlow {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

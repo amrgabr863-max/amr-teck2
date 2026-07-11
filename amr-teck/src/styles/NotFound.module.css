@@ -1,0 +1,66 @@
+/* ═══════════════════════════════════════════
+   NotFound Page Styles - تنسيقات صفحة 404
+   ═══════════════════════════════════════════ */
+
+.notFound {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.icon {
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.content h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--gold);
+  line-height: 1;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: var(--gray);
+  margin-bottom: 2rem;
+}
+
+.homeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--blue-dark);
+  padding: 14px 36px;
+  border-radius: 8px;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.homeBtn:hover {
+  background: var(--gold-light);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 5rem;
+  }
+
+  .content h2 {
+    font-size: 1.4rem;
+  }
+}

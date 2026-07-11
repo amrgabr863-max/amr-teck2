@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════
+   Footer Styles - تنسيقات تذييل الموقع
+   ═══════════════════════════════════════════ */
+
+.footer {
+  background: var(--blue-dark);
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.main {
+  padding: 4rem 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.logo span:first-child {
+  color: var(--white);
+}
+
+.logoAccent {
+  color: var(--gold);
+}
+
+.about {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.social {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  background: var(--blue);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.social a:hover {
+  background: var(--gold);
+  color: var(--blue-dark);
+  border-color: var(--gold);
+}
+
+.columnTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.links a {
+  color: var(--gray);
+  font-size: 0.9rem;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.links a:hover {
+  color: var(--gold);
+  padding-right: 8px;
+}
+
+.contactInfo {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactInfo li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.contactInfo li svg {
+  color: var(--gold);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.contactInfo a {
+  color: var(--gray);
+  transition: var(--transition);
+}
+
+.contactInfo a:hover {
+  color: var(--gold);
+}
+
+.bottom {
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.bottom p {
+  color: var(--gray);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .main {
+    padding: 3rem 0;
+  }
+}

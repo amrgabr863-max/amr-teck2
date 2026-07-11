@@ -1,0 +1,242 @@
+/* ═══════════════════════════════════════════
+   Why Choose Us Styles - لماذا تختار AMR-TECK
+   ═══════════════════════════════════════════ */
+
+.whyChooseUs {
+  padding: 6rem 0;
+  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* الجزء البصري */
+.visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.visualCard {
+  background: var(--blue-dark);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 24px;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 380px;
+}
+
+.visualIcon {
+  width: 80px;
+  height: 80px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-dark);
+  margin: 0 auto 1.5rem;
+}
+
+.visualTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.visualDesc {
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.visualStats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.vStat {
+  text-align: center;
+}
+
+.vStatNum {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--gold);
+}
+
+.vStatLabel {
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+/* الدوائر الزخرفية */
+.circle1,
+.circle2,
+.circle3 {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  z-index: 1;
+}
+
+.circle1 {
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: -50px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  bottom: -30px;
+  right: -30px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.circle3 {
+  width: 150px;
+  height: 150px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-color: rgba(201, 168, 76, 0.05);
+}
+
+/* الأسباب */
+.reasons {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.reasons.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.headerDesc {
+  color: var(--gray);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.reasonsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.reasonCard {
+  display: flex;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--blue-dark);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 16px;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.reasonCard.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reasonCard:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.reasonIcon {
+  min-width: 44px;
+  height: 44px;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  transition: var(--transition);
+}
+
+.reasonCard:hover .reasonIcon {
+  background: var(--gold);
+  color: var(--blue-dark);
+}
+
+.reasonContent {
+  flex: 1;
+}
+
+.reasonTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--white);
+}
+
+.reasonDesc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .visual {
+    order: 2;
+  }
+
+  .reasons {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .reasonsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .visualCard {
+    padding: 2rem;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3 {
+    display: none;
+  }
+}

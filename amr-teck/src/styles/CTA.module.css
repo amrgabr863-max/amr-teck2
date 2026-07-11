@@ -1,0 +1,84 @@
+/* ═══════════════════════════════════════════
+   CTA Section Styles - تنسيقات قسم الدعوة للعمل
+   ═══════════════════════════════════════════ */
+
+.cta {
+  position: relative;
+  padding: 6rem 0;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  text-align: center;
+  overflow: hidden;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, rgba(201, 168, 76, 0.05) 0%, transparent 70%);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  color: var(--gold);
+}
+
+.desc {
+  color: var(--gray);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.phoneBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 36px;
+  background: transparent;
+  border: 2px solid var(--gold);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Tajawal', sans-serif;
+  transition: var(--transition);
+}
+
+.phoneBtn:hover {
+  background: var(--gold);
+  color: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

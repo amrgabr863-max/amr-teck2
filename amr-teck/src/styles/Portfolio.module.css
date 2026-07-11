@@ -1,0 +1,217 @@
+/* ═══════════════════════════════════════════
+   Portfolio Section Styles - تنسيقات معرض الأعمال
+   ═══════════════════════════════════════════ */
+
+.portfolio {
+  padding: 6rem 0;
+  background: var(--blue-dark);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* فلتر الفئات */
+.filter {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 10px 24px;
+  background: var(--blue);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 50px;
+  color: var(--gray);
+  font-family: 'Tajawal', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filterBtn:hover {
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.filterActive {
+  background: var(--gold);
+  color: var(--blue-dark);
+  border-color: var(--gold);
+}
+
+.filterActive:hover {
+  background: var(--gold-light);
+}
+
+/* شبكة المشاريع */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* بطاقة المشروع */
+.projectCard {
+  background: var(--blue);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.projectCard:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* الصورة */
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/10;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.projectCard:hover .projectImage {
+  transform: scale(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.projectCard:hover .imageOverlay {
+  opacity: 1;
+}
+
+.overlayActions {
+  display: flex;
+  gap: 1rem;
+}
+
+.overlayBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: none;
+  color: var(--blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+  transform: translateY(20px);
+  opacity: 0;
+}
+
+.projectCard:hover .overlayBtn {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.projectCard:hover .overlayBtn:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.overlayBtn:hover {
+  background: var(--gold-light);
+  transform: scale(1.1);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--blue-dark);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
+}
+
+/* محتوى البطاقة */
+.projectContent {
+  padding: 1.5rem;
+}
+
+.projectTitle {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.projectDesc {
+  font-size: 0.85rem;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.projectTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+  padding: 3px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filter {
+    gap: 0.5rem;
+  }
+
+  .filterBtn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}

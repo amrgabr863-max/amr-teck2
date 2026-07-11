@@ -1,0 +1,191 @@
+/* ═══════════════════════════════════════════
+   Navbar Styles - تنسيقات شريط التنقل
+   ═══════════════════════════════════════════ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  transition: var(--transition);
+  background: transparent;
+}
+
+.scrolled {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  padding: 0.7rem 0;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+}
+
+.navContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* الشعار */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 1.8rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logoText {
+  color: var(--white);
+}
+
+.logoAccent {
+  color: var(--gold);
+}
+
+/* روابط التنقل */
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.navLink {
+  color: var(--gray-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 0;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: var(--transition);
+}
+
+.navLink:hover {
+  color: var(--white);
+}
+
+.navLink:hover::after,
+.active::after {
+  width: 100%;
+}
+
+.active {
+  color: var(--gold) !important;
+}
+
+/* زر الاتصال */
+.navCta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--blue-dark);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.navCta:hover {
+  background: var(--gold-light);
+  box-shadow: var(--shadow-gold);
+  transform: translateY(-2px);
+}
+
+/* زر القائمة للجوال */
+.menuToggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* قائمة الجوال */
+.mobileMenu {
+  display: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.mobileOpen {
+  max-height: 500px;
+}
+
+.mobileLinks {
+  list-style: none;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobileLink {
+  display: block;
+  padding: 1rem;
+  color: var(--gray-light);
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: var(--transition);
+}
+
+.mobileLink:hover {
+  background: var(--blue-light);
+  color: var(--white);
+}
+
+.mobileActive {
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
+
+.mobileCta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--gold);
+  color: var(--blue-dark);
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navLinks,
+  .navCta {
+    display: none;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .mobileMenu {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.4rem;
+  }
+}

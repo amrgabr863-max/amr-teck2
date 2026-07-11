@@ -1,0 +1,143 @@
+/* ============================================================
+   ProcessSection.css - تنسيقات قسم خطوات التنفيذ
+   ============================================================ */
+
+.process-section {
+  background: var(--black-light);
+  position: relative;
+}
+
+.process-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
+}
+
+/* Timeline */
+.process-timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Step */
+.process-step {
+  position: relative;
+}
+
+.step-content {
+  background: var(--black-lighter);
+  border: 1px solid rgba(212, 175, 55, 0.08);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.step-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.process-step:hover .step-content::before {
+  opacity: 1;
+}
+
+.process-step:hover .step-content {
+  border-color: rgba(212, 175, 55, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Number */
+.step-number {
+  position: absolute;
+  top: -15px;
+  right: 20px;
+  font-size: 3rem;
+  font-weight: 900;
+  color: rgba(212, 175, 55, 0.1);
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.process-step:hover .step-number {
+  color: rgba(212, 175, 55, 0.2);
+}
+
+/* Icon */
+.step-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 1.5rem;
+  transition: var(--transition);
+}
+
+.process-step:hover .step-icon {
+  background: var(--gold);
+  color: var(--black) !important;
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Title & Desc */
+.step-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+}
+
+.step-content p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* Connector Line (desktop only) */
+.step-connector {
+  display: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .process-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .process-timeline {
+    grid-template-columns: 1fr;
+  }
+
+  .step-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .step-number {
+    font-size: 2.5rem;
+  }
+}

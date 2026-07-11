@@ -1,0 +1,135 @@
+/* ═══════════════════════════════════════════
+   Blog Page Styles - تنسيقات صفحة المدونة
+   ═══════════════════════════════════════════ */
+
+.blog {
+  padding-top: 80px;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 100%);
+  padding: 6rem 0 4rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+.heroDesc {
+  color: var(--gray);
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 4rem 0 6rem;
+}
+
+.card {
+  background: var(--blue);
+  border: 1px solid rgba(201, 168, 76, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.card:hover {
+  border-color: rgba(201, 168, 76, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.imageWrapper {
+  position: relative;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.card:hover .imageWrapper img {
+  transform: scale(1.1);
+}
+
+.category {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--gold);
+  color: var(--blue-dark);
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+.meta span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.content h3 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.content p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.readMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.readMore:hover {
+  gap: 10px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
