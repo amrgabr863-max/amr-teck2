@@ -7,7 +7,7 @@ import Portfolio from './pages/Portfolio'
 import Blog from './pages/Blog'
 import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
-
+import Projects from "./components/Projects";
 // ═══════════════════════════════════════════
 // التطبيق الرئيسي - يحتوي على جميع المسارات
 // Main App Component with all routes

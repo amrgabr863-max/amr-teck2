@@ -7,7 +7,6 @@ import { FaExternalLinkAlt, FaArrowLeft } from 'react-icons/fa'
 import './PortfolioSection.css'
 
 const categories = ['الكل', 'مواقع', 'متاجر', 'تطبيقات', 'تعليم']
-
 const projects = [
   {
     id: 1,
@@ -15,7 +14,8 @@ const projects = [
     category: 'مواقع',
     desc: 'موقع احترافي لشركة صناعية كبرى مع نظام إدارة محتوى متكامل',
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop',
-    tags: ['React', 'Node.js', 'CMS']
+    tags: ['React', 'Node.js', 'CMS'],
+    live: '#'
   },
   {
     id: 2,
@@ -23,7 +23,8 @@ const projects = [
     category: 'متاجر',
     desc: 'متجر إلكتروني كامل مع بوابات دفع ونظام إدارة مخزون ذكي',
     image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=600&h=400&fit=crop',
-    tags: ['E-commerce', 'Payment', 'Inventory']
+    tags: ['E-commerce', 'Payment', 'Inventory'],
+    live: '#'
   },
   {
     id: 3,
@@ -31,7 +32,8 @@ const projects = [
     category: 'تعليم',
     desc: 'منصة تعليمية متكاملة مع فيديوهات تفاعلية واختبارات إلكترونية',
     image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop',
-    tags: ['LMS', 'Video', 'Quiz']
+    tags: ['LMS', 'Video', 'Quiz'],
+    live: '#'
   },
   {
     id: 4,
@@ -39,7 +41,8 @@ const projects = [
     category: 'تطبيقات',
     desc: 'تطبيق ويب لتتبع وإدارة المشاريع مع لوحات تحكم تفاعلية',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-    tags: ['Dashboard', 'Analytics', 'PWA']
+    tags: ['Dashboard', 'Analytics', 'PWA'],
+    live: '#'
   },
   {
     id: 5,
@@ -47,7 +50,8 @@ const projects = [
     category: 'مواقع',
     desc: 'موقع عصري لمصنع مع كتالوج منتجات ونظام طلبات',
     image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop',
-    tags: ['Catalog', 'Orders', 'SEO']
+    tags: ['Catalog', 'Orders', 'SEO'],
+    live: '#'
   },
   {
     id: 6,
@@ -55,8 +59,18 @@ const projects = [
     category: 'متاجر',
     desc: 'متجر إلكتروني للإلكترونيات مع مقارنة منتجات وتقييمات',
     image: 'https://images.unsplash.com/photo-1550009158-9ebf69173e03?w=600&h=400&fit=crop',
-    tags: ['Compare', 'Reviews', 'Mobile']
+    tags: ['Compare', 'Reviews', 'Mobile'],
+    live: '#'
   },
+  {
+    id: 7,
+    title: 'موقع Alumetals',
+    category: 'مواقع',
+    desc: 'موقع احترافي لشركة ألومات لعرض منتجات وخدمات الألومنيوم.',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=600&h=400&fit=crop',
+    tags: ['React', 'Vite', 'Vercel'],
+    live: 'https://alumetals-7x3x.vercel.app/'
+  }
 ]
 
 const PortfolioSection = () => {
@@ -107,10 +121,15 @@ const PortfolioSection = () => {
                         <span key={i}>{tag}</span>
                       ))}
                     </div>
-                    <button className="portfolio-view-btn">
-                      <FaExternalLinkAlt />
-                      عرض المشروع
-                    </button>
+                   <a
+  href={project.live}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="portfolio-view-btn"
+>
+  <FaExternalLinkAlt />
+  عرض المشروع
+</a>
                   </div>
                 </div>
               </div>
