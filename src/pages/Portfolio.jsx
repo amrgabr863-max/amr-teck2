@@ -11,7 +11,7 @@ const projects = [
     id: 1,
     title: 'موقع شركة الصناعات المعدنية',
     category: 'مواقع الشركات',
-    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop',
+    image: '/images/alumetals.jpg'photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop',
     description: 'موقع احترافي لشركة صناعية كبرى مع نظام إدارة محتوى متكامل',
     tags: ['React', 'Node.js', 'CMS'],
     link: '#',
@@ -62,7 +62,15 @@ const projects = [
     link: '#',
   },
 ]
-
+{
+  id: 7,
+  title: 'موقع Alumetals',
+  category: 'مواقع الشركات',
+  image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=500&fit=crop',
+  description: 'موقع احترافي لشركة ألومات لعرض منتجات وخدمات الألومنيوم.',
+  tags: ['React', 'Vite', 'Vercel'],
+  link: 'https://alumetals-7x3x.vercel.app/',
+},
 const Portfolio = () => {
   return (
     <>
@@ -86,9 +94,14 @@ const Portfolio = () => {
                 <div className={styles.imageWrapper}>
                   <img src={project.image} alt={project.title} loading="lazy" />
                   <div className={styles.overlay}>
-                    <a href={project.link} className={styles.viewBtn} aria-label="View project">
-                      <ExternalLink size={20} />
-                    </a>
+                    
+                    <a
+  href={project.link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={styles.viewBtn}
+  aria-label="View project"
+></a>
                   </div>
                 </div>
                 <div className={styles.content}>
