@@ -5,13 +5,12 @@ import styles from '../styles/PortfolioPage.module.css'
 // ═══════════════════════════════════════════
 // Portfolio Page - صفحة أعمالنا
 // ═══════════════════════════════════════════
-
 const projects = [
   {
     id: 1,
     title: 'موقع شركة الصناعات المعدنية',
     category: 'مواقع الشركات',
-    image: '/images/alumetals.jpg'photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop',
+    image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&h=500&fit=crop',
     description: 'موقع احترافي لشركة صناعية كبرى مع نظام إدارة محتوى متكامل',
     tags: ['React', 'Node.js', 'CMS'],
     link: '#',
@@ -61,16 +60,16 @@ const projects = [
     tags: ['Next.js', 'Redis', 'Docker'],
     link: '#',
   },
+  {
+    id: 7,
+    title: 'موقع Alumetals',
+    category: 'مواقع الشركات',
+    image: '/images/alumetals.jpg',
+    description: 'موقع احترافي لشركة Alumetals لعرض منتجات وخدمات الألومنيوم.',
+    tags: ['React', 'Vite', 'Vercel'],
+    link: 'https://alumetals-7x3x.vercel.app/',
+  },
 ]
-{
-  id: 7,
-  title: 'موقع Alumetals',
-  category: 'مواقع الشركات',
-  image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&h=500&fit=crop',
-  description: 'موقع احترافي لشركة ألومات لعرض منتجات وخدمات الألومنيوم.',
-  tags: ['React', 'Vite', 'Vercel'],
-  link: 'https://alumetals-7x3x.vercel.app/',
-},
 const Portfolio = () => {
   return (
     <>
