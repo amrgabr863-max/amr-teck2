@@ -69,6 +69,15 @@ const projects = [
     tags: ['React', 'Vite', 'Vercel'],
     link: 'https://alumetals-7x3x.vercel.app/',
   },
+  {
+  id: 8,
+  title: 'مطعم الشامي السوري',
+  category: 'مواقع المطاعم',
+  image: '/images/alshami-restaurant.jpg',
+  description: 'موقع إلكتروني احترافي لمطعم الشامي السوري لعرض المنيو والخدمات والصور والتواصل مع العملاء.',
+  tags: ['React', 'Vite', 'Tailwind CSS'],
+  link: 'https://alshami-restaurant.vercel.app/',
+},
 ]
 const Portfolio = () => {
   return (
